@@ -37,7 +37,6 @@ exports.login = async (req, res) => {
 		const body = _.pick(req.body, ["email", "password"]);
 		const user = await User.findByCredentials(body.email, body.password);
 		const token = await user.generateAuthToken();
-		// res.header("x-auth", token).send(user);
 		res.status(200).send({
 			token,
 			user,
