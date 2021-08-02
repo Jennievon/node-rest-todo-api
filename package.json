@@ -1,0 +1,47 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && nyc --reporter=html --reporter=text mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'",
+    "debug": "nodemon --inspect ./server/server.js",
+    "start": "node ./server/server.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "engines": {
+    "node": "8.8.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.5",
+    "crypto-js": "^3.1.6",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "lodash": "^4.15.0",
+    "mongodb": "^2.2.5",
+    "mongoose": "^4.5.9",
+    "validator": "^5.6.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "expect": "^21.1.0",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.5",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
+    "nyc": "^11.4.1",
+    "supertest": "^2.0.0"
+  },
+  "nyc": {
+    "exclude": [
+      "**/config.js",
+      "**/mongoose.js",
+      "**/server.js"
+    ]
+  }
+}

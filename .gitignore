@@ -1,0 +1,7 @@
+node_modules
+playground
+.vscode
+coverage
+.coveralls.yml
+.nyc_output
+server/config/config.json
