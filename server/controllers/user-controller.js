@@ -12,9 +12,9 @@ exports.create = async (req, res) => {
 		var user = new User(body);
 		await user.save();
 		const token = await user.generateAuthToken();
-		res.header("x-auth", token).send(user);
+		res.status(201).send(user);
 	} catch (e) {
-		res.status(404).send(e);
+		res.status(400).send(e);
 	}
 };
 

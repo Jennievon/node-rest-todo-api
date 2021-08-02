@@ -76,7 +76,9 @@ exports.deleteById = async (req, res) => {
 			_creator: req.user._id,
 		});
 		if (!todo) {
-			return res.status(404).send();
+			return res.status(400).send({ 
+				message: "todo not found"
+			});
 		}
 		res.send({ todo });
 	} catch (e) {
@@ -108,10 +110,12 @@ exports.update = async (req, res) => {
 			{ new: true },
 		);
 		if (!todo) {
-			res.status(404).send();
+			res.status(404).send({ 
+				message: "todo not found"
+			});
 		}
 		res.send({ todo });
 	} catch (e) {
-		res.status(404).send();
+		res.status(400).send(e);
 	}
 };

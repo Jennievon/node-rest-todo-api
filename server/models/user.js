@@ -92,6 +92,9 @@ UserSchema.statics.findByToken = function (token) {
 	var decoded;
 	try {
 		decoded = jwt.verify(token, process.env.JWT_SECRET);
+        console.log("🚀 ~ file: user.js ~ line 95 ~ decoded", decoded)
+
+	
 	} catch (e) {
 		// return new Promise((resolve,reject)=>{
 		//   return reject();
