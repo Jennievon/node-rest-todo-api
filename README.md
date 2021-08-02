@@ -8,25 +8,21 @@
 # Express REST API
 
 Todo REST API complete with user accounts and authentication.
-This api was the final challenge from [Udemy Course](https://www.udemy.com/the-complete-nodejs-developer-course-2/learn/v4/overview).<p>
-This was developed focus on [TDD](https://github.com/dwyl/learn-tdd).</p>
-
-Demo : https://node-rest-api-todo.glitch.me
 
 ## Buzzwords
 
-* Node.js
-* Express
-* MongoDB
-* Mongoose
-* Mocha
-* REST API Design
-* Clean Arquitecture
-* Clean Code
-* JWT Authentication
-* Version control with Git
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- Mocha
+- REST API Design
+- Clean Arquitecture
+- Clean Code
+- JWT Authentication
+- Version control with Git
 
-## Instalation
+## Installation
 
 ```bash
 $ git clone git@github.com:AFGM/node-terminal-weather.git
@@ -71,9 +67,9 @@ Error handling acording with REST API [standards](http://www.restapitutorial.com
 
 ### API Resources
 
-* [POST /users](#post-users)
-* [POST /todos](#post-todos)
-* [GET /todos/:id](#get-todosid)
+- [POST /users](#post-users)
+- [POST /todos](#post-todos)
+- [GET /todos/:id](#get-todosid)
 
 ### POST /users
 
@@ -81,8 +77,8 @@ Request body:
 
 ```json
 {
-  "email": "test@gmail.com",
-  "password": "default"
+	"email": "test@gmail.com",
+	"password": "default"
 }
 ```
 
@@ -92,7 +88,7 @@ Request body:
 
 ```json
 {
-  "text": "Sample todo"
+	"text": "Sample todo"
 }
 ```
 
@@ -102,13 +98,13 @@ Response body:
 
 ```json
 {
-  "todo": {
-    "_id": "5aa587d1cfce06ecbef0a7ae",
-    "text": "Sample Todo2",
-    "_creator": "5aa58675cfce06ecbef0a7a7",
-    "__v": 0,
-    "completedAt": null,
-    "completed": false
-  }
+	"todo": {
+		"_id": "5aa587d1cfce06ecbef0a7ae",
+		"text": "Sample Todo2",
+		"_creator": "5aa58675cfce06ecbef0a7a7",
+		"__v": 0,
+		"completedAt": null,
+		"completed": false
+	}
 }
 ```
